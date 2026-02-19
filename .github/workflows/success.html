@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Successful</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card success-card">
+      <h1>✅ Payment Successful</h1>
+      <p id="success-message">Your payment has been received.</p>
+      <div class="success-details" id="success-details"></div>
+      <a href="admin.html" class="link">Create another payment</a>
+    </section>
+  </main>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const method = params.get('method') || 'UPI';
+    const txnId = params.get('txnId') || '-';
+    const amount = params.get('amount') || '0.00';
+    const merchantName = params.get('merchantName') || 'Merchant';
+
+    document.getElementById('success-message').textContent =
+      `Payment received by ${merchantName}.`;
+    document.getElementById('success-details').innerHTML = `
+      <p><strong>Amount:</strong> ₹${Number(amount).toFixed(2)}</p>
+      <p><strong>Transaction ID:</strong> ${txnId}</p>
+      <p><strong>Method:</strong> ${method}</p>
+    `;
+  </script>
+</body>
+</html>
