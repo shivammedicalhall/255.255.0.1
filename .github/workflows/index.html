@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Gateway QR</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header class="card">
+      <h1>Payment Gateway System</h1>
+      <p>Create a specific QR code for each amount.</p>
+      <a href="admin.html" class="link">Open Backend Page</a>
+    </header>
+
+    <section class="card" id="payment-card">
+      <h2 id="merchant-name">Merchant</h2>
+      <p id="description">Pay securely using UPI QR.</p>
+      <div class="amount" id="amount-label">Amount: ₹0.00</div>
+      <div id="qrcode" class="qrcode"></div>
+      <p class="upi" id="upi-uri"></p>
+      <button id="download-btn">Download QR</button>
+    </section>
+  </main>
+
+  <script src="payment.js"></script>
+</body>
+</html>
