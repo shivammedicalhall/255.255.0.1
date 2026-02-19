@@ -1,0 +1,96 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #101828;
+}
+
+.container {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.2rem;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.08);
+}
+
+h1, h2, p {
+  margin-top: 0;
+}
+
+.link {
+  color: #175cd3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.amount {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.qrcode {
+  width: 240px;
+  height: 240px;
+  margin: 0 auto 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #d0d5dd;
+  border-radius: 12px;
+}
+
+.upi {
+  word-break: break-all;
+  font-size: 0.9rem;
+  color: #344054;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  background: #175cd3;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.form-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+input {
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  padding: 0.55rem;
+  font-size: 1rem;
+}
+
+.result {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
