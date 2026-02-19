@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Backend - Set Amount QR</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Backend Page</h1>
+      <p>Configure merchant details and create amount-specific QR links.</p>
+
+      <form id="config-form" class="form-grid">
+        <label>
+          Merchant Name
+          <input type="text" id="merchantName" required placeholder="ABC Store" />
+        </label>
+
+        <label>
+          UPI ID
+          <input type="text" id="upiId" required placeholder="abcstore@okaxis" />
+        </label>
+
+        <label>
+          Amount (INR)
+          <input type="number" id="amount" min="1" step="0.01" required placeholder="499" />
+        </label>
+
+        <label>
+          Notes
+          <input type="text" id="notes" placeholder="Order #1002" />
+        </label>
+
+        <button type="submit">Generate Payment Link</button>
+      </form>
+
+      <div id="result" class="result hidden">
+        <h2>Generated Link</h2>
+        <input id="generatedLink" readonly />
+        <a id="openLink" class="link" href="#">Open customer payment page</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
